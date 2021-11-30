@@ -1,7 +1,5 @@
 package src.controller;
 
-
-import src.model.Comment;
 import src.model.Content;
 import src.model.WebPage;
 import src.view.WebPageView;
@@ -51,10 +49,15 @@ public class WebPageController {
         model.addContent(content);
     }
 
-    public void updateView() {
-        view.
+    public Content editContent(int indexOf) {
+        return model.editContent(indexOf);
     }
 
+    public void setContentIndex(int indexOf, Content content) {
+        model.setContentIndex(indexOf, content);
+    }
 
-
+    public void updateView(){
+        
+    }
 }

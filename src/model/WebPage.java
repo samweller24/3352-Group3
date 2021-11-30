@@ -37,7 +37,6 @@ public class WebPage {
         this.section = section;
     }
 
-
     public Content[] getContent() {
         return contents;
     }
@@ -45,8 +44,17 @@ public class WebPage {
     public void setContent(Content[] content) {
         this.contents = content;
     }
+
     public void addContent(Content content){
         contents[contents.length-1] = content;
+    }
+
+    public Content editContent(int indexOf){
+        return contents[indexOf];
+    }
+
+    public void setContentIndex(int indexOf, Content content){
+        contents[indexOf] = content;
     }
 
 

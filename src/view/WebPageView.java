@@ -9,17 +9,7 @@ public class WebPageView {
         System.out.println("URL: " + URL);
         System.out.println("Header: " + header);
         System.out.println("Body: " + section);
-
-        String content = "";
-        for(int i = 0; i < contents.length; i ++){
-            Content curr = contents[i];
-            content +=
-                    ("Title: ") +
-                    ("Body: " + curr.getHeader() + " ") +
-                    ("TypeOfMedia: " + curr.getBody() + " ") +
-                    ("LinkedContent: " + curr.getUserCreatedBy() + "\n");
-        }
-        System.out.println(comment);
+        System.out.println("Content: " + contents);
 
 
     }
