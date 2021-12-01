@@ -58,6 +58,6 @@ public class WebPageController {
     }
 
     public void updateView(){
-        
+        this.view.printWebPageDetails(model.getURL(), model.getHeader(), model.getSection(), model.getContent());
     }
 }

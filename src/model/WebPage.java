@@ -1,10 +1,12 @@
 package src.model;
 
+import src.controller.ContentController;
+
 public class WebPage {
     private String URL ;
     private String header;
-    private  String section;
-    private  Content[] contents;
+    private String section;
+    private Content[] contents;
 
     public WebPage(String header, String URL, String section, Content[] contents) {
         this.header = header;
@@ -56,6 +58,5 @@ public class WebPage {
     public void setContentIndex(int indexOf, Content content){
         contents[indexOf] = content;
     }
-
 
 }
