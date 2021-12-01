@@ -1,8 +1,8 @@
 package src.controller;
-
+import src.model.Student;
+import src.view.StudentView;
 
 public class StudentController {
-
     private Student model;
     private StudentView view;
      
