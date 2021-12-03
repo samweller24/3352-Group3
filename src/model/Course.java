@@ -1,10 +1,19 @@
-package src.model;
+package model;
 
 public class Course {
    private String id;
    private String section;
    private String name;
 
+   /**
+    * Course Model
+    *
+    *
+    * @param id - the course ID
+    * @param section - the course section
+    * @param name - the coures name
+    *
+    */
    public Course(String id, String section, String name){
       this.id = id;
       this.section = section;

@@ -1,4 +1,4 @@
-package src.model;
+package model;
 
 public class Instructor extends User {
     public String[] teaches;

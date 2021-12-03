@@ -1,11 +1,20 @@
-package src.view;
+package view;
+
+import model.Content;
 
 public class ContentView {
-    public void PrintContentDetails(String title, String body, String typeOfMedia, String linkedContent){
-        System.out.println("Comment: ");
-        System.out.println("Title: " + title);
-        System.out.println("Body: " + body);
-        System.out.println("Type Of Media: " + typeOfMedia);
-        System.out.println("linked Content: " + linkedContent);
+
+    /**
+     * Content View
+     *
+     *
+     * @param model - the model class of content to get print details
+     */
+    public void PrintContentDetails(Content model){
+        System.out.println("Content: ");
+        System.out.println("Title: " + model.getTitle());
+        System.out.println("Body: " + model.getBody());
+        System.out.println("Type Of Media: " + model.getTypeOfMedia());
+        System.out.println("linked Content: " + model.getLinkedContent());
     }
 }

@@ -1,11 +1,20 @@
-package src.controller;
-import src.model.Instructor;
-import src.view.InstructorView;
+package controller;
+
+import model.Instructor;
+import view.InstructorView;
 
 public class InstructorController {
     private Instructor model;
     private InstructorView view;
-     
+
+
+    /**
+     * Instructor Controller
+     *
+     *
+     * @param model - the Instructor model class that defines values
+     * @param view - the Instructor view class that prints vales
+     */
     public InstructorController(Instructor model, InstructorView view){
         this.model = model;
         this.view = view;
@@ -36,6 +45,6 @@ public class InstructorController {
     }
      
     public void updateView(){				
-        view.printInstructorDetails(model.getUserName(), model.getEmail(), model.getTeaches());
+        view.printInstructorDetails(model);
     }	
 }

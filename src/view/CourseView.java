@@ -1,12 +1,20 @@
-package src.view;
+package view;
 
-import src.model.Course;
+import model.Course;
 
 public class CourseView {
-   public void printCourseDetails(Course course){
+
+   /**
+    * Course View
+    *
+    *
+    * @param model - the model class of Course to get print details
+    *
+    */
+   public void printCourseDetails(Course model){
       System.out.println("Course: ");
-      System.out.println("ID: " + course.getid());
-      System.out.println("Section: " + course.getSection());
-      System.out.println("Name: " + course.getName());
+      System.out.println("ID: " + model.getid());
+      System.out.println("Section: " + model.getSection());
+      System.out.println("Name: " + model.getName());
   } 
 }

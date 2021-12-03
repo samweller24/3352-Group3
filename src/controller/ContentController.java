@@ -1,12 +1,20 @@
-package src.controller;
+package controller;
 
-import src.model.Content;
-import src.view.ContentView;
+import model.Content;
+import view.ContentView;
 
 public class ContentController {
     private Content model;
     private ContentView view;
 
+
+    /**
+     * Content Controller
+     *
+     *
+     * @param model - the Content model class that defines values
+     * @param view - the Content view class that prints vales
+     */
     public ContentController(Content model, ContentView view) {
         this.model = model;
         this.view = view;
@@ -53,6 +61,6 @@ public class ContentController {
     }
 
     public void updateView() {
-        view.PrintContentDetails(model.getTitle(), model.getBody(),model.getTypeOfMedia(),model.getLinkedContent());
+        view.PrintContentDetails(model);
     }
 }

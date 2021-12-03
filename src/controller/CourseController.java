@@ -1,12 +1,20 @@
-package src.controller;
+package controller;
 
-import src.model.Course;
-import src.view.CourseView;
+
+import model.Course;
+import view.CourseView;
 
 public class CourseController {
    private Course model;
    private CourseView view;
 
+   /**
+    * Course Controller
+    *
+    *
+    * @param model - the Course model class that defines values
+    * @param view - the Course view class that prints vales
+    */
    public CourseController(Course model, CourseView view){
       this.model = model;
       this.view = view;

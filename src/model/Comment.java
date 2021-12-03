@@ -1,10 +1,20 @@
-package src.model;
+package model;
 
 public class Comment {
     public String header;
     public String body;
     public String userCreatedBy;
 
+
+    /**
+     * Comment Model
+     *
+     *
+     * @param header - the header of the comment
+     * @param body - the contents of the comment
+     * @param userCreatedBy - the user who created the comment
+     *
+     */
     public Comment(String header, String body, String userCreatedBy) {
         this.header = header;
         this.body = body;

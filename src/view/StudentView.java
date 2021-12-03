@@ -1,10 +1,25 @@
-package src.view;
+package view;
+
+import model.Student;
 
 public class StudentView {
-    public void printStudentDetails(String userName, String email, String[] courseEnrollment){
+
+    /**
+     * Student View
+     *
+     *
+     * @param model - the model class of Student to get print details
+     *
+     */
+    public void printStudentDetails(Student model){
         System.out.println("Student: ");
-        System.out.println("Username: " + userName);
-        System.out.println("Email: " + email);
-        System.out.println("Enrolled Courses: " + courseEnrollment);
+        System.out.println("Username: " + model.getUserName());
+        System.out.println("Password: " + model.getPassword());
+        System.out.println("Email: " + model.getEmail());
+        System.out.println("Enrolled Courses: ");
+
+        for(int i = 0; i < model.getCourseEnrollment().length; i ++){
+            System.out.println(model.getCourseEnrollment()[i]);
+        }
     } 
 }

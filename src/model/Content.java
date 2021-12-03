@@ -1,4 +1,4 @@
-package src.model;
+package model;
 
 public class Content {
     private String title;
@@ -6,6 +6,16 @@ public class Content {
     private String typeOfMedia;
     private String linkedContent;
 
+    /**
+     * Content Model
+     *
+     *
+     * @param title - The Title of the content
+     * @param body - the contents of the the body
+     * @param typeOfMedia - the type of media
+     * @param linkedContent - the link to other content
+     *
+     */
     public Content(String title, String body, String typeOfMedia, String linkedContent) {
         this.title = title;
         this.body = body;

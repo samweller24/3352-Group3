@@ -1,10 +1,18 @@
-package src.view;
+package view;
+
+import model.Comment;
 
 public class CommentView {
-    public void PrintCommentDetails(String header, String body, String userCreatedBy){
+    /**
+     * Comment View
+     *
+     *
+     * @param model - the model class of comment to get print details from
+     */
+    public void PrintCommentDetails(Comment model){
         System.out.println("Comment: ");
-        System.out.println("Header: " + header);
-        System.out.println("Body: " + body);
-        System.out.println("User Created By: " + userCreatedBy);
+        System.out.println("Header: " + model.getHeader());
+        System.out.println("Body: " + model.getBody());
+        System.out.println("User Created By: " + model.getUserCreatedBy());
     }
 }

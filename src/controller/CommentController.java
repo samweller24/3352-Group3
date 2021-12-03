@@ -1,14 +1,20 @@
-package src.controller;
+package controller;
 
-import src.model.Comment;
-import src.view.CommentView;
+import model.Comment;
+import view.CommentView;
 
 public class CommentController {
     private Comment model;
     private CommentView view;
 
-    public CommentController(Comment comment, CommentView view){
-        this.model = comment;
+    /**
+    * Comment Controller
+    *
+    * @param model - the comment model class that defines values
+     * @param view - the comment view class that prints vales
+    */
+    public CommentController(Comment model, CommentView view){
+        this.model = model;
         this.view = view;
     }
 
@@ -37,6 +43,6 @@ public class CommentController {
     }
 
     public void updateView(){
-        this.view.PrintCommentDetails(this.model.getHeader(), this.model.getBody(), this.model.getUserCreatedBy());
+        this.view.PrintCommentDetails(model);
     }
 }

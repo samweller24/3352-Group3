@@ -1,42 +1,57 @@
-package src.controller;
+package controller;
 
-import src.model.Student;
-import src.view.StudentView;
+import model.Student;
+import view.StudentView;
 
 public class StudentController {
     private Student model;
     private StudentView view;
-     
+
+    /**
+     * Student Controller
+     *
+     *
+     * @param model - the Student model class that defines values
+     * @param view - the Student view class that prints vales
+     */
     public StudentController(Student model, StudentView view){
         this.model = model;
         this.view = view;
     }
-     
-    public void setStudentUserName(String userName){
-        model.setUserName(userName);		
-    }
-     
-    public String getStudentName(){
-        return model.getUserName();		
-    }
-     
-    public void setStudentEmail(String email){
-        model.setEmail(email);		
-    }
-     
-    public String getStudentEmail(){
-        return model.getEmail();		
+
+    public String[] getCourseEnrollment() {
+        return model.getCourseEnrollment();
     }
 
-    public void addCourse(String course){
-        model.addEnrolledCourse(course);		
+    public void addEnrolledCourse(String course) {
+        model.addEnrolledCourse(course);
     }
-     
-    public String[] getCourseEnrollment(){
-        return model.getCourseEnrollment();		
+
+    public String getEmail() {
+        return model.getEmail();
     }
-     
-    public void updateView(){				
-        view.printStudentDetails(model.getUserName(), model.getEmail(), model.getCourseEnrollment());
-    }	
+
+    public String getUserName() {
+        return model.getUserName();
+    }
+
+    public String getPassword() {
+        return model.getPassword();
+    }
+
+    public void setEmail(String email) {
+        model.setEmail(email);
+    }
+
+    public void setUserName(String userName) {
+        model.setUserName(userName);
+    }
+
+    public void setPassword(String password) {
+        model.setPassword(password);
+    }
+
+    public void updateView(){
+        view.printStudentDetails(model);
+    }
 }

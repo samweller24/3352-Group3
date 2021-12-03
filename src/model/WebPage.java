@@ -1,6 +1,4 @@
-package src.model;
-
-import src.controller.ContentController;
+package model;
 
 public class WebPage {
     private String URL ;
@@ -8,6 +6,15 @@ public class WebPage {
     private String section;
     private Content[] contents;
 
+    /**
+     * WebPage
+     *
+     *
+     * @param header - the header of the webpage
+     * @param URL - the url to access the webpage
+     * @param section - the section data
+     * @param contents - Contents array that stores an object reference to content
+     */
     public WebPage(String header, String URL, String section, Content[] contents) {
         this.header = header;
         this.URL = URL;

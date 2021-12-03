@@ -1,15 +1,23 @@
-package src.controller;
+package controller;
 
-import src.model.Content;
-import src.model.WebPage;
-import src.view.WebPageView;
+
+import model.Content;
+import model.WebPage;
+import view.WebPageView;
 
 public class WebPageController {
     private WebPage model;
     private WebPageView view;
 
-    public WebPageController(WebPage comment, WebPageView view){
-        this.model = comment;
+    /**
+     * WebPage Controller
+     *
+     *
+     * @param model - the WebPage model class that defines values
+     * @param view - the WebPage view class that prints vales
+     */
+    public WebPageController(WebPage model, WebPageView view){
+        this.model = model;
         this.view = view;
     }
 
@@ -58,6 +66,6 @@ public class WebPageController {
     }
 
     public void updateView(){
-        this.view.printWebPageDetails(model.getURL(), model.getHeader(), model.getSection(), model.getContent());
+        this.view.printWebPageDetails(this.model);
     }
 }
