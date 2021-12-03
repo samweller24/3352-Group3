@@ -53,6 +53,6 @@ public class ContentController {
     }
 
     public void updateView() {
-
+        view.PrintContentDetails(model.getTitle(), model.getBody(),model.getTypeOfMedia(),model.getLinkedContent());
     }
 }
